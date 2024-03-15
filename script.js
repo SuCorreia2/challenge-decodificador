@@ -46,25 +46,17 @@ function desencriptar(stringDesencriptada) {
     return stringDesencriptada;
 }
 
-function verificaTextArea() {
-    let textArea = document.querySelector('.textArea');
-    let btnLimpar = document.querySelector('.botao-limpar');
-    if (textArea.value !== '') {
-        btnLimpar.style.display = 'block';
-    } else {
-        btnLimpar.style.display = 'none'
-    }
-}
-
 let placeholderOriginal = textArea.placeholder;
 
 function limpar() { 
-    let textArea = document.querySelector('.textArea');
     textArea.value = '';
     textArea.placeholder = placeholderOriginal;
-    verificaTextArea();
 }
 
+function limpar2() { 
+    let mensagem = document.querySelector('.mensagem');
+    mensagem.value = '';
+}
 
 function copiar() {
     mensagem.select();
@@ -72,12 +64,3 @@ function copiar() {
     alert('Texto copiado para a área de transferência.')
 }
 
-function someTexto() {
-    let mensagem = document.querySelector('.mensagem');
-    let texto = document.querySelector('.mensagem-nao-encontrado');
-    if (mensagem.value === '') {
-        texto.style.display = 'block';
-    } else {
-        texto.style.display = 'none';
-    }
-}

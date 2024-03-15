@@ -13,7 +13,7 @@
     </header>
     <main>
         <section>
-            <textarea class="textArea" placeholder="Digite seu texto" cols="41" rows="3" oninput="verificaTextArea()"></textarea>
+            <textarea class="textArea" placeholder="Digite seu texto" cols="41" rows="3"></textarea>
             <div class="informacao">
                 <img src="./assets/warning.png" alt="Símbolo de um ponto de exclamação" class="informacao-simbolo">
                 <h6 class="informacao-texto">Apenas letras minúsculas e sem acento.</h6>
@@ -26,11 +26,14 @@
         </section>
 
         <section class="text-area-saida">
-                <textarea class="mensagem" cols="20" rows="5" oninput="someTexto()"></textarea>
-                <div class="mensagem-elementos">
+                <textarea class="mensagem" cols="20" rows="5"></textarea>
+                <div class="mensagem-elementos" oninput="mostrarElementos()">
                     <img src="./assets/lupinha.png" alt="Personagem segurando uma lupa">
-                    <p class="mensagem-nao-encontrado" onclick="someTexto()" ><span>Nenhuma mensagem encontrada.</span><br>Digite um texto que você deseja criptografar <br>ou descriptografar.</p>
-                    <button class="botao-copiar" onclick="copiar()">Copiar</button> 
+                    <p class="mensagem-nao-encontrado"><span>Nenhuma mensagem encontrada.</span><br>Digite um texto que você deseja criptografar <br>ou descriptografar.</p>
+                    <div class="btn">
+                        <button class="botao-copiar" onclick="copiar()">Copiar</button> 
+                        <button class="botao-limpar2" onclick="limpar2()" >Limpar</button>
+                    </div>
                 </div>
         </section>
     </main>
