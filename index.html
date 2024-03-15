@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <title>Decodificador de Texto</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/alura.png" class="logo-alura" alt="Logo da Alura">
+    </header>
+    <main>
+        <section>
+            <textarea class="textArea" placeholder="Digite seu texto" cols="41" rows="3" oninput="verificaTextArea()"></textarea>
+            <div class="informacao">
+                <img src="./assets/warning.png" alt="Símbolo de um ponto de exclamação" class="informacao-simbolo">
+                <h6 class="informacao-texto">Apenas letras minúsculas e sem acento.</h6>
+            </div>
+            <div class="botoes">
+                <button class="botao-criptografar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="botao-descriptografar" onclick="btnDesencriptar()" >Descriptografar</button>
+            </div>
+            <button class="botao-limpar" onclick="limpar()">Limpar</button>
+        </section>
+
+        <section class="text-area-saida">
+                <textarea class="mensagem" cols="20" rows="5" oninput="someTexto()"></textarea>
+                <div class="mensagem-elementos">
+                    <img src="./assets/lupinha.png" alt="Personagem segurando uma lupa">
+                    <p class="mensagem-nao-encontrado" onclick="someTexto()" ><span>Nenhuma mensagem encontrada.</span><br>Digite um texto que você deseja criptografar <br>ou descriptografar.</p>
+                    <button class="botao-copiar" onclick="copiar()">Copiar</button> 
+                </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <footer class="rodape">
+        <img src="./assets/direito-autoral.png" class="rodape-simbolo" alt=" Símbolo de direito autoral">
+        <p class ="texto-rodape">Desenvolvido por Suellen Correia | Programa ONE + Alura | 2024 </p>
+    </footer>
+</body>
+</html>

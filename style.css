@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #F3F5FC;
+}
+
+.logo-alura {
+    padding-top: 10px;
+    margin: 10px;
+    width: 120px;
+    height: 48px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.textArea {
+    width: 680px;
+    background-color: #F3F5FC;
+    border: none;
+    color: #0A3871;
+    margin-top: 22px;
+    margin-right: 24px;
+    margin-left: 16px;
+}
+
+::placeholder {color: #0A3871}
+    .textArea:focus{
+        outline: none;
+    }
+
+.informacao {
+    width: 292px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.informacao-simbolo {
+    width: 16px;    
+    height: 16px;
+}
+
+.informacao-texto {
+    font-size: 12px;
+    color: #495057;
+}
+
+.botoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.botao-criptografar {
+    width: 328px;
+    height: 67px;
+    border-radius: 2rem;
+    border: none;
+    background-color: #0A3871;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.botao-descriptografar {
+    width: 328px;
+    height: 67px;
+    border-radius: 32px;
+    border: 1px solid #0A3871;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-size: 16px;
+}
+
+.botao-limpar {
+    width: 328px;
+    height: 67px;
+    margin: 16px 0 0 160px;
+    border-radius: 2rem;
+    border: none;
+    background-color: #0A3871;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.text-area-saida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mensagem {
+    width: 400px;
+    height: 500px; 
+    background-color: white;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin-top: -74px;
+    padding-left: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mensagem:focus {
+    outline: none;
+}
+
+.mensagem-elementos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+img {
+    width: 250px;
+    height: 230px;
+    margin-top: 0;
+}
+
+.mensagem-nao-encontrado {
+    margin-bottom: 35px;
+    font-size: 16px;
+    color: #495057;
+    text-align: center;
+}
+
+span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #343A40;
+}
+
+.botao-copiar {
+    width: 336px;
+    height: 67px;
+    margin: 10px 0 0 30px;
+    border-radius: 32px;
+    border: 1px solid #0A3871;
+    background-color: #FFFFFF;
+    color: #0A3871;
+    font-size: 16px;
+}
+
+.rodape {
+    width: 100%;
+    height: 40px;
+    background-color: #0A3871;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+ 
+}
+
+.rodape-simbolo {
+    width: 16px;
+    height: 16px;
+}
+
+.texto-rodape {
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {}
+    
+
+@media screen and (max-width: 576px) {}
