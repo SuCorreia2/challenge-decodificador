@@ -6,6 +6,7 @@ textArea.addEventListener('blur', function() {
     if (!this.value) {
         this.placeholder = 'Digite seu texto';
     }
+    textArea.placeholder = placeholderOriginal;
 });
 
 let mensagem = document.querySelector('.mensagem');
@@ -32,6 +33,7 @@ function btnDesencriptar() {
     let textoDesencriptado = desencriptar(textArea.value);
     mensagem.value = textoDesencriptado;
     textArea.value = '';
+    textArea.placeholder = placeholderOriginal;
 }
 
 function desencriptar(stringDesencriptada) {
@@ -47,13 +49,23 @@ function desencriptar(stringDesencriptada) {
 }
 
 let placeholderOriginal = textArea.placeholder;
-
 function limpar() { 
+    let textArea = document.querySelector('.textArea');
     textArea.value = '';
     textArea.placeholder = placeholderOriginal;
+    apareceLimpar();
 }
 
-function limpar2() { 
+function apareceLimpar() {
+    let apareceLimpar = document.querySelector('.botao-limpar');
+    if (textArea.value === '') {
+        apareceLimpar.style.visibility = 'hidden';
+    } else {
+        apareceLimpar.style.visibility = 'visible';
+    }
+}
+
+function limparSaida() { 
     let mensagem = document.querySelector('.mensagem');
     mensagem.value = '';
 }
@@ -64,3 +76,12 @@ function copiar() {
     alert('Texto copiado para a área de transferência.')
 }
 
+function apareceElementos() {
+    let mensagem = document.querySelector('.mensagem');
+    let elementos = document.querySelector('.mensagem-elementos');
+    if (mensagem.value === '') {
+        elementos.style.visibility = 'hidden';
+    } else {
+        elementos.style.visibility = 'visible';
+    }
+}

@@ -12,8 +12,8 @@
         <img src="./assets/alura.png" class="logo-alura" alt="Logo da Alura">
     </header>
     <main>
-        <section>
-            <textarea class="textArea" placeholder="Digite seu texto" cols="41" rows="3"></textarea>
+        <section class="principal">
+            <textarea class="textArea" placeholder="Digite seu texto" cols="41" rows="3" oninput="apareceLimpar()"></textarea>
             <div class="informacao">
                 <img src="./assets/warning.png" alt="Símbolo de um ponto de exclamação" class="informacao-simbolo">
                 <h6 class="informacao-texto">Apenas letras minúsculas e sem acento.</h6>
@@ -22,17 +22,17 @@
                 <button class="botao-criptografar" onclick="btnEncriptar()">Criptografar</button>
                 <button class="botao-descriptografar" onclick="btnDesencriptar()" >Descriptografar</button>
             </div>
-            <button class="botao-limpar" onclick="limpar()">Limpar</button>
+            <button class="botao-limpar" onclick="limpar()" style="visibility: hidden;">Limpar</button>
         </section>
 
         <section class="text-area-saida">
-                <textarea class="mensagem" cols="20" rows="5"></textarea>
-                <div class="mensagem-elementos" oninput="mostrarElementos()">
-                    <img src="./assets/lupinha.png" alt="Personagem segurando uma lupa">
-                    <p class="mensagem-nao-encontrado"><span>Nenhuma mensagem encontrada.</span><br>Digite um texto que você deseja criptografar <br>ou descriptografar.</p>
+                <textarea class="mensagem" cols="20" rows="5" oninput="apareceElementos()"></textarea>
+                <div class="mensagem-elementos" style="visibility: visible;">
+                    <img src="./assets/lupinha.png" class="lupinha" alt="Personagem segurando uma lupa">
+                    <p class="mensagem-nao-encontrado" ><span>Nenhuma mensagem encontrada.</span><br>Digite um texto que você deseja criptografar <br>ou descriptografar.</p>
                     <div class="btn">
                         <button class="botao-copiar" onclick="copiar()">Copiar</button> 
-                        <button class="botao-limpar2" onclick="limpar2()" >Limpar</button>
+                        <button class="botao-limpar-saida" onclick="limparSaida()" >Limpar</button>
                     </div>
                 </div>
         </section>

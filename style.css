@@ -6,7 +6,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 32px;
-    line-height: 150%;
+    line-height: 1.5;
 }
 
 html {
@@ -19,11 +19,12 @@ html {
     padding-top: 10px;
     margin: 10px;
     width: 120px;
-    height: 48px;
+    height: auto;
 }
 
 main {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 50px;
@@ -31,7 +32,8 @@ main {
 }
 
 .textArea {
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
     height: 150px;
     background-color: #F3F5FC;
     border: none;
@@ -134,7 +136,7 @@ main {
     margin-bottom: 16px;
 }
 
-img {
+.lupinha {
     width: 250px;
     height: 210px;
     margin-top: 0;
@@ -169,7 +171,7 @@ span {
     font-size: 16px;
 }
 
-.botao-limpar2 {
+.botao-limpar-saida {
     width: 130px;
     height: 67px;
     margin: 10px 0 0 20px;
@@ -202,3 +204,63 @@ span {
     font-size: 12px;
 }
 
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .textArea {
+        max-width: 100%;
+    }
+
+    .text-area-saida {
+        
+        margin-top: 85px;
+        margin-right: 60px;
+    }
+
+    .rodape {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .principal {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: auto;
+    }   
+
+    .textArea {
+        max-width: auto;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao-limpar {
+        margin-left: auto;
+    }
+
+    .text-area-saida {
+        width: 100%;
+        height: 270px;
+    }
+
+    .lupinha {
+        display: none;
+    }
+
+}
