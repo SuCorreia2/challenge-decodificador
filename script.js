@@ -15,6 +15,10 @@ function btnEncriptar() {
     let textoEncriptado = encriptar(textArea.value);
     mensagem.value = textoEncriptado;
     textArea.value = '';
+    textArea.placeholder = placeholderOriginal;
+    apareceLimpar();
+    apareceElementos();
+    apareceBotoes();
 }
 
 function encriptar(stringEncriptada) {
@@ -34,6 +38,9 @@ function btnDesencriptar() {
     mensagem.value = textoDesencriptado;
     textArea.value = '';
     textArea.placeholder = placeholderOriginal;
+    apareceLimpar();
+    apareceElementos();
+    apareceBotoes();
 }
 
 function desencriptar(stringDesencriptada) {
@@ -68,20 +75,38 @@ function apareceLimpar() {
 function limparSaida() { 
     let mensagem = document.querySelector('.mensagem');
     mensagem.value = '';
+    apareceElementos();
+    apareceBotoes();
 }
 
 function copiar() {
+    if (mensagem.value !== '') {
     mensagem.select();
     navigator.clipboard.writeText(mensagem.value);
     alert('Texto copiado para a área de transferência.')
+    } else {
+        alert('Não há texto para ser copiado.')
+    }
 }
 
 function apareceElementos() {
     let mensagem = document.querySelector('.mensagem');
     let elementos = document.querySelector('.mensagem-elementos');
+    let botoes = document.querySelector('.btn');
+   
     if (mensagem.value === '') {
-        elementos.style.visibility = 'hidden';
-    } else {
         elementos.style.visibility = 'visible';
+    } else {
+        elementos.style.visibility = 'hidden';        
+    }
+}
+
+function apareceBotoes() {
+    let mensagem = document.querySelector('.mensagem');
+    let botoes = document.querySelector('.btn');
+    if (mensagem.value === '') {
+        botoes.style.visibility = 'hidden';
+    } else {
+        botoes.style.visibility = 'visible';
     }
 }

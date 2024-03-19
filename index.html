@@ -26,11 +26,11 @@
         </section>
 
         <section class="text-area-saida">
-                <textarea class="mensagem" cols="20" rows="5" oninput="apareceElementos()"></textarea>
-                <div class="mensagem-elementos" style="visibility: visible;">
+                <textarea class="mensagem" cols="20" rows="5" oninput="apareceElementos(), apareceBotoes()"></textarea>
+                <div class="mensagem-elementos">
                     <img src="./assets/lupinha.png" class="lupinha" alt="Personagem segurando uma lupa">
                     <p class="mensagem-nao-encontrado" ><span>Nenhuma mensagem encontrada.</span><br>Digite um texto que você deseja criptografar <br>ou descriptografar.</p>
-                    <div class="btn">
+                    <div class="btn" style="visibility: hidden;">
                         <button class="botao-copiar" onclick="copiar()">Copiar</button> 
                         <button class="botao-limpar-saida" onclick="limparSaida()" >Limpar</button>
                     </div>
