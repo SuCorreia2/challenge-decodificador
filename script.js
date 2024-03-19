@@ -78,10 +78,10 @@ function copiar() {
 
 function apareceElementos() {
     let mensagem = document.querySelector('.mensagem');
-    let elementos = document.querySelector('.mensagem-elementos');
+    let apareceElementos = document.querySelector('.mensagem-elementos');
     if (mensagem.value === '') {
-        elementos.style.visibility = 'hidden';
+        apareceElementos.style.visibility = 'hidden';
     } else {
-        elementos.style.visibility = 'visible';
+        apareceElementos.style.visibility = 'visible';
     }
 }
