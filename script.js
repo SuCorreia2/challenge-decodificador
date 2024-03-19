@@ -92,8 +92,6 @@ function copiar() {
 function apareceElementos() {
     let mensagem = document.querySelector('.mensagem');
     let elementos = document.querySelector('.mensagem-elementos');
-    let botoes = document.querySelector('.btn');
-   
     if (mensagem.value === '') {
         elementos.style.visibility = 'visible';
     } else {
